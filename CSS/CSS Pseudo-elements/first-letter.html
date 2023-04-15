@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      p::first-letter {
+        color: #ff0000;
+        font-size: xx-large;
+      }
+      p.intro::first-letter {
+        color: #ff0000;
+        font-size: 200%;
+      }
+      p::first-letter {
+        color: #ff0000;
+        font-size: xx-large;
+      }
+
+      p::first-line {
+        color: #0000ff;
+        font-variant: small-caps;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      You can use the ::first-letter pseudo-element to add a special effect to
+      the first character of a text!
+    </p>
+
+    <p class="intro">This is an introduction.</p>
+    <p>This is a paragraph with some text. A bit more text even.</p>
+
+    <h1>Multiple Pseudo-elements</h1>
+    <p>
+      You can combine the ::first-letter and ::first-line pseudo-elements to add
+      a special effect to the first letter and the first line of a text!
+    </p>
+  </body>
+</html>

@@ -1,0 +1,258 @@
+What is CSS? -->>
+    CSS stands for Cascading Style Sheets
+    CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+    CSS saves a lot of work. It can control the layout of multiple web pages all at once
+    External stylesheets are stored in CSS files
+
+Why Use CSS?
+    CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
+
+ example-->> 
+                <!DOCTYPE html>
+                <html>
+                <head>
+                <style>
+                body {
+                background-color: lightblue;
+                }
+
+                h1 {
+                color: white;
+                text-align: center;
+                }
+
+                p {
+                font-family: verdana;
+                font-size: 20px;
+                }
+                </style>
+                </head>
+                <body>
+
+                <h1>My First CSS Example</h1>
+                <p>This is a paragraph.</p>
+
+                </body>
+                </html>
+
+
+CSS Solved a Big Problem : -->> 
+            HTML was NEVER intended to contain tags for formatting a web page!
+            HTML was created to describe the content of a web page, like:
+            <h1>This is a heading</h1>
+            <p>This is a paragraph.</p>
+            When tags like <font>, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.
+            To solve this problem, the World Wide Web Consortium (W3C) created CSS.
+            CSS removed the style formatting from the HTML page!
+
+CSS Saves a Lot of Work! : -->>> 
+The style definitions are normally saved in external .css files.
+With an external stylesheet file, you can change the look of an entire website by changing just one file!            
+
+SYNTAX -->> 
+    A CSS rule consists of a selector and a declaration block.
+    
+ex -> 
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <style>
+        p {
+        color: red;
+        text-align: center;
+        } 
+        </style>
+        </head>
+        <body>
+
+        <p>Hello World!</p>
+        <p>These paragraphs are styled with CSS.</p>
+
+        </body>
+        </html>
+    
+Example Explained :-
+p is a selector in CSS (it points to the HTML element you want to style: <p>).
+color is a property, and red is the property value
+text-align is a property, and center is the property value
+
+--------------------------------------------
+CSS selector-->>> 
+    A CSS selector selects the HTML element(s) you want to style.
+CSS Selectors:->
+    CSS selectors are used to "find" (or select) the HTML elements you want to style.
+    We can divide CSS selectors into five categories:
+    Simple selectors (select elements based on name, id, class)
+    Combinator selectors (select elements based on a specific relationship between them)
+    Pseudo-class selectors (select elements based on a certain state)
+    Pseudo-elements selectors (select and style a part of an element)
+    Attribute selectors (select elements based on an attribute or attribute value)
+1 -> element Selector : -> 
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <style>
+            p {
+            text-align: center;
+            color: red;
+            } 
+            </style>
+            </head>
+            <body>
+            <p>Every paragraph will be affected by the style.</p>
+            <p id="para1">Me too!</p>
+            <p>And me!</p>
+
+            </body>
+            </html>
+
+2 -> id Selector : -> 
+            The id selector uses the id attribute of an HTML element to select a specific element.
+            The id of an element is unique within a page, so the id selector is used to select one unique element!
+            To select an element with a specific id, write a hash (#) character, followed by the id of the element.
+ex -->> 
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <style>
+            #para1 {
+            text-align: center;
+            color: red;
+            }
+            </style>
+            </head>
+            <body>
+
+            <p id="para1">Hello World!</p>
+            <p>This paragraph is not affected by the style.</p>
+
+            </body>
+            </html>
+Note: An id name cannot start with a number!
+
+3 -> The CSS class Selector : ->
+        The class selector selects HTML elements with a specific class attribute.
+        To select elements with a specific class, write a period (.) character, followed by the class name.
+ex ->> 
+            <style>
+            .center {
+            text-align: center;
+            color: red;
+            }
+            </style>
+            </head>
+            <body>
+
+            <h1 class="center">Red and center-aligned heading</h1>
+            <p class="center">Red and center-aligned paragraph.</p> 
+
+
+4 -> The CSS Universal Selector : -> 
+    The universal selector (*) selects all HTML elements on the page.
+ex -> 
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <style>
+        * {
+        text-align: center;
+        color: blue;
+        }
+        </style>
+        </head>
+        <body>
+
+        <h1>Hello world!</h1>
+
+        <p>Every element on the page will be affected by the style.</p>
+        <p id="para1">Me too!</p>
+        <p>And me!</p>
+
+        </body>
+        </html>
+
+5 -> The CSS Grouping Selector : -> 
+        The grouping selector selects all the HTML elements with the same style definitions.
+        Look at the following CSS code (the h1, h2, and p elements have the same style definitions):
+
+ex -> 
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <style>
+        h1, h2, p {
+        text-align: center;
+        color: red;
+        }
+        </style>
+        </head>
+        <body>
+        <h1>Hello World!</h1>
+        <h2>Smaller heading!</h2>
+        <p>This is a paragraph.</p>
+        </body>
+        </html>
+
+--------------------------------------
+Margen --->>>
+    Margins are used to create space around elements, outside of any defined borders.
+The CSS margin properties are used to create space around elements, outside of any defined borders.
+With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).
+
+Margin - Individual Sides
+CSS has properties for specifying the margin for each side of an element:
+    margin-top
+    margin-right
+    margin-bottom
+    margin-left
+
+All the margin properties can have the following values:
+    auto - the browser calculates the margin
+    length - specifies a margin in px, pt, cm, etc.
+    % - specifies a margin in % of the width of the containing element
+    inherit - specifies that the margin should be inherited from the parent element
+Tip: Negative values are allowed.
+
+Padding --->>>
+        CSS Padding
+    The CSS padding properties are used to generate space around an element's content, inside of any defined borders.
+    With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).
+
+CSS Height, Width and Max-width--->>>
+    The CSS height and width properties are used to set the height and width of an element.
+    The CSS max-width property is used to set the maximum width of an element.
+
+CSS height and width Values:-> 
+    The height and width properties may have the following values:
+        auto - This is default. The browser calculates the height and width
+        length - Defines the height/width in px, cm, etc.
+        % - Defines the height/width in percent of the containing block
+        initial - Sets the height/width to its default value
+        inherit - The height/width will be inherited from its parent value
+
+Note: If you for some reason use both the width property and the max-width property on the same element, and the value of the width property is larger than the max-width property; the max-width property will be used (and the width property will be ignored).
+
+---------------------
+
+CSS Out - Line property --->>> 
+    The outline-style property specifies the style of the outline, and can have one of the following values:
+        dotted - Defines a dotted outline
+        dashed - Defines a dashed outline
+        solid - Defines a solid outline
+        double - Defines a double outline
+        groove - Defines a 3D grooved outline
+        ridge - Defines a 3D ridged outline
+        inset - Defines a 3D inset outline
+        outset - Defines a 3D outset outline
+        none - Defines no outline
+        hidden - Defines a hidden outline
+
+
+
+
+
+
+
+
+
+
